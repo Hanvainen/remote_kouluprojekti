@@ -1,0 +1,158 @@
+have created a quiz program which goes through 5 questions. If you get a question wrong you are forced to start again from the beginning, I added this loop by placing the code goto start; and placed start: where I wanted it to loop from.
+
+My question is: I want to add a part at the end where it says how many times the program was looped so I can add a writeline saying "well done you took X times to complete the quiz"
+
+here is the main part of the program:(without the namespaces and using statements)
+
+        /*----------------------------------------Declaration----------------------------------------- */
+
+        string q1, q2, q3, q4, q5;
+
+        /*----------------------------------------TITLE----------------------------------------- */
+
+        Console.WriteLine("Welcome to the Ultimate quiz!");
+        Console.WriteLine();
+
+        /*----------------------------------------QUESTION 1----------------------------------------- */
+        start:
+        Console.WriteLine("The JavaScript Language is not object oriented (True/False)");
+        Console.WriteLine();
+        q1 = Console.ReadLine();
+        q1 = q1.ToUpper();
+
+        if (q1 == "TRUE")
+        {
+            Console.WriteLine();
+            Console.WriteLine("Well Done, you may move on to the next question");
+        }
+
+        else
+        {
+            Console.WriteLine("Sorry you got the answer wrong, you have to start again");
+            goto start;
+        }
+
+        Console.WriteLine();
+
+        /*----------------------------------------QUESTION 2----------------------------------------- */
+
+        Console.WriteLine("What is the age range to qualify for an apprenticeship in the uk? Please type in the following format xx-yy");
+        Console.WriteLine();
+        q2 = Console.ReadLine();
+
+        if (q2 == "16-24")
+        {
+            Console.WriteLine();
+            Console.WriteLine("Well Done, you may move on to the next question");
+        }
+
+        else
+        {
+            Console.WriteLine("Sorry you got the answer wrong, you have to start again");
+            goto start;
+        }
+
+        Console.WriteLine();
+
+        /*----------------------------------------QUESTION 3----------------------------------------- */
+
+        Console.WriteLine("Is HTML a programming language (Yes or No)");
+        Console.WriteLine();
+        q3 = Console.ReadLine();
+        q3 = q3.ToUpper();
+
+        if (q3 == "NO")
+        {
+            Console.WriteLine();
+            Console.WriteLine("Well Done, you may move on to the next question");
+        }
+
+        else
+        {
+            Console.WriteLine("Sorry you got the answer wrong, you have to start again");
+            goto start;
+        }
+
+        Console.WriteLine();
+
+        /*----------------------------------------QUESTION 4----------------------------------------- */
+        Console.WriteLine("In JavaScript, What are the 2 charecters used to symbolise a single line comment?");
+        Console.WriteLine();
+        q4 = Console.ReadLine();
+
+        if (q4 == "//")
+        {
+            Console.WriteLine();
+            Console.WriteLine("Well Done, you may move on to the next question");
+        }
+
+        else
+        {
+            Console.WriteLine("Sorry you got the answer wrong, you have to start again");
+            goto start;
+        }
+
+        Console.WriteLine();
+
+        /*----------------------------------------QUESTION 5----------------------------------------- */
+        Console.WriteLine("500 < 600 && 700 < 600");
+        Console.WriteLine();
+        Console.WriteLine("Is the above statement true or false ?");
+        Console.WriteLine();
+        q5 = Console.ReadLine();
+        q5 = q5.ToUpper();
+
+        if (q5 == "FALSE")
+        {
+            Console.WriteLine();
+            Console.WriteLine("Well Done, you may move on to the next question");
+            Console.WriteLine();
+            Console.WriteLine("Congratulations You have passed the quiz!");
+        }
+
+        else
+        {
+            Console.WriteLine("Sorry you got the answer wrong, you have to start again");
+            goto start;
+        }
+
+        Console.WriteLine();
+
+
+        }
+    }
+}
+Thanks for all the help.
+
+c#.netasp.net-mvcentity
+Share
+Improve this question
+Follow
+asked Nov 11, 2015 at 16:46
+Nafis Rahman's user avatar
+Nafis Rahman
+9711 silver badge1111 bronze badges
+Is there a reason why you are using goto? – 
+doctorlove
+ Nov 11, 2015 at 16:53
+I am an apprentice and learning c#. i saw a video on YouTube using this loop but I was advised by my boss that its quite old code and I should organise it into methods to wrap them haven't got that far yet – 
+Nafis Rahman
+ Nov 11, 2015 at 17:01
+You might find it easier if you find a different learning tool. goto can make you code hard to follow. – 
+doctorlove
+ Nov 11, 2015 at 17:10
+Add a comment
+5 Answers
+Sorted by:
+
+Highest score (default)
+
+3
+
+
+Simply add three line in your code -->
+
+Before Start: --> int count = 0;
+After Start: --> count++;
+Last line of your code. -->
+
