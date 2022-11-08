@@ -1,3 +1,5 @@
+täsäsä olisi muutkosia tähän tarinaan
+
 have created a quiz program which goes through 5 questions. If you get a question wrong you are forced to start again from the beginning, I added this loop by placing the code goto start; and placed start: where I wanted it to loop from.
 
 My question is: I want to add a part at the end where it says how many times the program was looped so I can add a writeline saying "well done you took X times to complete the quiz"
