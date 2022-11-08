@@ -1,3 +1,8 @@
+ALOITETAAMPAS ALUSTA, NYT ADHD AIVOT KESKITTYY!
+TÄMÄ TARINA LÄHTEE NYT COMMITTINA GITHUBISTA
+
+
+
 täsäsä olisi muutkosia tähän tarinaan
 
 have created a quiz program which goes through 5 questions. If you get a question wrong you are forced to start again from the beginning, I added this loop by placing the code goto start; and placed start: where I wanted it to loop from.
